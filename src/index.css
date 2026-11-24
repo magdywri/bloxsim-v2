@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.hero-perspective-grid {
+  background-image:
+    linear-gradient(to right, rgba(148, 163, 184, 0.14) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.14) 1px, transparent 1px);
+  background-size: 38px 28px;
+  mask-image: radial-gradient(ellipse 68% 72% at 50% 42%, black 20%, transparent 78%);
+  -webkit-mask-image: radial-gradient(ellipse 68% 72% at 50% 42%, black 20%, transparent 78%);
+}
+
+.dark .hero-perspective-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+}
+
+/* Custom thin scrollbars matching the screenshots */
+.sim-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.sim-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sim-scroll::-webkit-scrollbar-thumb {
+  background: rgba(120, 120, 128, 0.35);
+  border-radius: 9999px;
+}
+
+.sim-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 120, 128, 0.55);
+}
+
+/* Suppress typing caret, text selection, and I-beam cursor across UI while Auto Gift runs */
+.auto-gift-no-caret,
+.auto-gift-no-caret * {
+  cursor: default !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  caret-color: transparent !important;
+}
+

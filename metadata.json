@@ -1,0 +1,6 @@
+{
+  "name": "BloxSim — Unofficial Robux Simulator",
+  "description": "An unofficial Roblox-themed Robux simulator for demonstration, streamer overlays, and entertainment purposes. All balances, transfers, and purchases are simulated.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
